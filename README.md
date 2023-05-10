@@ -14,36 +14,37 @@ Database schema:
 
 articles table with columns for id, title, body, author, and image
 Routes:
-
-GET / - Home page
-GET /about - About page
-GET /blog - Blog page
-GET /blog/{id} - Article detail page
-GET /contact - Contact page
-POST /contact - Send message
+<ul>
+<li>GET / - Home page</li>
+<li>GET /about - About page</li>
+<li>GET /blog - Blog page</li>
+<li>GET /blog/{id} - Article detail page</li>
+<li>GET /contact - Contact page</li>
+<li>POST /contact - Send message</li>
+</ul>
 Folder Structure:
 
-app/
-Http/
-Controllers/
-HomeController.php
-AboutController.php
-BlogController.php
-ContactController.php
-Requests/
-ContactRequest.php
-Models/
-Article.php
-resources/
-views/
-home.blade.php
-about.blade.php
-blog/
-index.blade.php
-show.blade.php
-contact.blade.php
-routes/
-web.php
-database/
-migrations/
-2023_05_10_000000_create_articles_table.php
+- app/<br>
+-- Http/<br>
+--- Controllers/<br>
+---- HomeController.php<br>
+---- AboutController.php<br>
+---- BlogController.php<br>
+---- ContactController.php<br>
+-- Requests/<br>
+--- ContactRequest.php<br>
+-- Models/<br>
+--- Article.php<br>
+- resources/<br>
+-- views/<br>
+--- home.blade.php<br>
+--- about.blade.php<br>
+--- blog/<br>
+---- index.blade.php<br>
+---- show.blade.php<br>
+--- contact.blade.php<br>
+- routes/<br>
+-- web.php<br>
+- database/<br>
+-- migrations/<br>
+--- 2023_05_10_000000_create_articles_table.php<br><br>
