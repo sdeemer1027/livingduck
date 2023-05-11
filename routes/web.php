@@ -23,3 +23,7 @@ Route::get('/virtual-pet-duck', [App\Http\Controllers\VirtualPetDuckController::
 Route::post('/virtual-pet-duck/feed/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'feed'])->name('virtual-pet-duck.feed');
 Route::post('/virtual-pet-duck/play/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'play'])->name('virtual-pet-duck.play');
 Route::post('/virtual-pet-duck/time-passes/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'timePasses'])->name('virtual-pet-duck.time-passes');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

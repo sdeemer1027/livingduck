@@ -11,11 +11,11 @@ class VirtualPetDuckController extends Controller
 {
     public function index()
     {
-  //      $duck = VirtualPetDuck::firstOrCreate(['name' => 'Quackers'], ['hunger' => 0, 'happiness' => 100])->get();
-        $duck = VirtualPetDuck::select()->get();
-//        dd($duck);
+        $duck = VirtualPetDuck::firstOrCreate(['name' => 'Quackers'], ['hunger' => 0, 'happiness' => 100])->get();
+  //      $duck = VirtualPetDuck::select()->get();
+  //      dd($duck);
 
-        return view('virtual_pet_duck.index', ['ducks' => $duck]);
+        return view('virtual_pet_duck.index', ['duck' => $duck]);
     }
 
     public function feed(VirtualPetDuck $duck)
