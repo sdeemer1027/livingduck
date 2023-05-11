@@ -21,6 +21,9 @@ class VirtualPetDuckController extends Controller
     public function feed(VirtualPetDuck $duck)
     {
         $duck->feed();
+
+     //   dd($duck);
+
         return redirect()->route('virtual-pet-duck.index');
     }
 
@@ -29,10 +32,16 @@ class VirtualPetDuckController extends Controller
         $duck->play();
         return redirect()->route('virtual-pet-duck.index');
     }
-
-    public function timePasses(VirtualPetDuck $duck)
+    public function timePasses(Request $request, VirtualPetDuck $duck)
     {
-        $duck->timePasses();
-        return redirect()->route('virtual-pet-duck.index');
+        $duck->increment('hunger', 10);
+        $duck->decrement('happiness', 5);
+        $duck->save();
+
+        return response()->json([
+            'hunger' => $duck->hunger,
+            'happiness' => $duck->happiness,
+        ]);
     }
+
 }
