@@ -95,13 +95,13 @@
                       // update the virtual pet duck status on the page
                       setTimeout(function() {
                           location.reload();
-                      }, 5000);
+                      }, 2500);
                   },
                   error: function(xhr) {
                       console.log(xhr.responseText);
                   }
               });
-          }, 10000);
+          }, 5000);
       });
   </script>
 
