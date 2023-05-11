@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use App\Http\Controllers\VirtualPetDuckController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/virtual-pet-duck', [App\Http\Controllers\VirtualPetDuckController::class, 'index'])->name('virtual-pet-duck.index');
+Route::post('/virtual-pet-duck/feed/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'feed'])->name('virtual-pet-duck.feed');
+Route::post('/virtual-pet-duck/play/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'play'])->name('virtual-pet-duck.play');
+Route::post('/virtual-pet-duck/time-passes/{duck}', [App\Http\Controllers\VirtualPetDuckController::class, 'timePasses'])->name('virtual-pet-duck.time-passes');
