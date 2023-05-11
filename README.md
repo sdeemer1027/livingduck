@@ -8,13 +8,13 @@ feed him - play with him<br>
 
 Steps :
 Clone this repository <br>
-create a database named livingduck <br>
-if you need to copy the .env.example to .env<BR>
-Run <BR>
+Create a database named livingduck <br>
+Copy the .env.example to .env<BR>
+Run : <BR>
 composer Install <br>
 npm install<br>
-php artisan migrate:fresh --seed<br>
 npm run dev<br>
+php artisan migrate:fresh --seed<br>
 
 
 
