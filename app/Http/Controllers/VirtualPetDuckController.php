@@ -44,4 +44,13 @@ class VirtualPetDuckController extends Controller
         ]);
     }
 
+
+
+    public function destroy(VirtualPetDuck $duck)
+    {
+        $duck->delete();
+
+        return redirect()->route('virtual-pet-duck.index');
+    }
+
 }
