@@ -1,7 +1,10 @@
 
 Project: Living Duck Website
 
-Description: A website for a fictional company that provides information about ducks and their habitats.
+Description: A website for a fictional company that provides information about ducks and their habitats.nThe main function is about a Virtual Pet Duck you should 
+feed him - pet him - 
+feed him - play with him 
+ to keep him healthy and happy 
 
 Features:
 
