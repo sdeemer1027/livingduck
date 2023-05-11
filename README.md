@@ -5,48 +5,30 @@ Description: A website for a fictional company that provides information about d
 feed him - play with him<br> 
  to keep him healthy and happy 
 
+
+Steps :
+Clone this repository <br>
+create a database named livingduck <br>
+if you need to copy the .env.example to .env<BR>
+Run <BR>
+composer Install <br>
+npm install<br>
+php artisan migrate:fresh --seed<br>
+npm run dev<br>
+
+
+
+
 Features:
 
-Home page with information about the company and its mission
-About page with information about the company
-Blog page with a list of articles about ducks and their habitats
-Article detail page with the full text of the article
-Contact page with a form for sending a message to the company
 Database schema:
+users table seeded with one demo user<br>
+email : demo@demo.com<br>
+password : password<br>
+virtual_pet_ducks Not seeded and empty <br>
+When you visit the duck on first pass it will create a duck and start his life
 
-articles table with columns for id, title, body, author, and image
-Routes:
-<ul>
-<li>GET / - Home page</li>
-<li>GET /about - About page</li>
-<li>GET /blog - Blog page</li>
-<li>GET /blog/{id} - Article detail page</li>
-<li>GET /contact - Contact page</li>
-<li>POST /contact - Send message</li>
-</ul>
-Folder Structure:
+every 10 seconds that pass he will grow hungry and become less happy 
+while on that page do not forget to feed him and play with him 
+if you just wait 20 to 30 seconds and reload the page you will see he becomes more hungry and less happy 
 
-- app/<br>
--- Http/<br>
---- Controllers/<br>
----- HomeController.php<br>
----- AboutController.php<br>
----- BlogController.php<br>
----- ContactController.php<br>
--- Requests/<br>
---- ContactRequest.php<br>
--- Models/<br>
---- Article.php<br>
-- resources/<br>
--- views/<br>
---- home.blade.php<br>
---- about.blade.php<br>
---- blog/<br>
----- index.blade.php<br>
----- show.blade.php<br>
---- contact.blade.php<br>
-- routes/<br>
--- web.php<br>
-- database/<br>
--- migrations/<br>
---- 2023_05_10_000000_create_articles_table.php<br><br>
