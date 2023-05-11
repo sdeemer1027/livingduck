@@ -24,7 +24,7 @@
                           <form action="{{ route('virtual-pet-duck.destroy', ['duck' => $ducks->id]) }}" method="POST">
                               @csrf
                               @method('DELETE')
-                              <button type="submit" class="btn btn-danger">Destroy</button>
+                              <button type="submit" class="btn btn-danger">Restart / Destroy</button>
                           </form>
 </span>
 
@@ -34,8 +34,14 @@
                   <span class="card-body">
           @foreach($duck as $ducks)
               <p>My  Name is :<strong>{{ $ducks->name }} </strong>
+                  <br> very simple If you do not feed me I grow hungry if you do not pet me I get sad<br>
+                  I will only run while you are on this page every 10 seconds my data refreshes and I get hungry by 10 and happy drops by 5
+                  <BR><BR>The page will refresh every 5 seconds so if you sit here do nothing for 30 seconds you will see the changes<BR>
+                  Also Note if you Do Not Pet me at any time and my happy drops below 70 my picture will change
+
+
               </p>
-              <p>Hunger level: {{ $ducks->hunger }}   
+              <p>Hunger level: {{ $ducks->hunger }}
                           <form method="POST" action="{{ route('virtual-pet-duck.feed', ['duck' => $ducks->id]) }}">
                           @csrf
                           <!-- form inputs -->
